@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="./Assets/favicon.png" width="18" height="18" >
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="./Styles/bootstrap.min.css">
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="./Styles/all.min.css">
+    <!--MEDIA QUERIES-->
+    <link rel="stylesheet" href="./Styles/media.css">
+    <!--MAIN STYLE-->
+    <link rel="stylesheet" href="./Styles/main.css">
+</head>
+<body>
+    <div class="main-c container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="register row w-100">
+            <!--LOGIN FORM-->
+            <div class="login col-lg-6 d-flex flex-column">
+                <h2 class="heading-main text-center py-4">Sign In</h2>
+                <form id="login-form" class="px-5 pb-4 needs-validation" novalidate>
+                    <div class="i-group mb-3 w-75 m-auto">
+                        <label for="loginEmail" class="form-label">Email address</label>
+                        <input oninput="validateForm(this.form)" type="email" class="form-control" id="loginEmail" placeholder="Enter email" required>
+                    </div>
+                    <div class="i-group mb-3 w-75 m-auto">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Enter password" required>
+                    </div>
+                    <div class="btn-container w-75 m-auto mt-5">
+                        <button id="loginBtn" type="submit" class="btn w-100">Log In</button>
+                    </div>
+                </form>
+            </div>
+            <!--SIGNUP FORM-->
+            <div class="signup col-lg-6 d-flex flex-column">
+                <h2 class="heading-main text-center py-lg-4">Sign Up</h2>
+                <form id="signup-form" class="px-5 pb-4 needs-validation" novalidate>
+                    <div class="i-group mb-3 w-75 m-auto">
+                        <label for="signupUsername" class="form-label">Username</label>
+                        <input oninput="validateForm(this.form)" type="text" class="form-control" id="signupUsername" placeholder="Enter username" required minlength="3">
+                        <div class="invalid-feedback">Username must be at least 3 characters long.</div>
+                    </div>
+                    <div class="i-group mb-3 w-75 m-auto">
+                        <label for="signupEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="signupEmail" placeholder="Enter email" required>
+                    </div>
+                    <div class="i-group mb-3 w-75 m-auto">
+                        <label for="signupPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control w-" id="signupPassword" placeholder="Enter password" required minlength="6">
+                    </div>
+                    <div class="btn-container w-75 m-auto mt-5">
+                        <button id="signupBtn" type="submit" class="btn w-100">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!--WELCOME-->
+        <div id="welcome" class="welcome col-lg-6 text-center">
+            <h1 id="welcome-h" class="py-4">Hello, Friend!</h1>
+            <p id="welcome-message" class="lead">If you don't have an account yet, sign up</p>
+            <button id="welcomeBtn" class="btn mt-4 w-25">Sign up</button>
+            <!--LOGOUT BUTTON-->
+            <button id="logoutBtn" class="btn btn-outline-light mt-3 w-25 d-none">Logout</button>
+        </div>
+    </div>
+
+    <!--TOAST-->
+    <div class="toast-container"></div>
+
+    <!--BOOTSTRAP-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!--MAIN SCRIPT-->
+    <script src="./js/main.js"></script>
+</body>
+</html>
