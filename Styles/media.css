@@ -70,7 +70,7 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 576px) {
     .heading-main{
         font-size: 1.5rem !important;
         padding-bottom: .3rem !important;
@@ -127,4 +127,43 @@
         right: 10px !important;
     }
 
+}
+
+@media screen and (max-width: 576px) and (min-height: 700px) {
+    .welcome.logged-in {
+        height: 100vh !important; 
+    }
+    .login{
+        height: 55vh !important;
+        margin-top: 2rem !important;
+    }
+    .signup{
+        height: 45vh !important;
+        margin-top: 1.5rem !important;
+    }
+}
+
+@media screen and (min-height: 915px) {
+    .login{
+        margin-top: 4rem !important;
+    }
+    .signup{
+        margin-top: 4rem !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .welcome h1 {
+        font-size: 2rem !important;
+    }
+    .welcome p {
+        font-size: .9rem !important;
+        width: 90% !important;
+    }
+    .i-group{
+        width: 100% !important;
+    }
+    #welcomeBtn{
+        width: 50% !important;
+    }
 }
